@@ -1,12 +1,9 @@
 'use client'
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import Navebar from "./Navebar";
-import Image from "next/image";
+import Navebar from "../Navebar";
 import { gsap } from "gsap";
 import React from "react";
 import { useLayoutEffect, useRef } from "react";
-export default function Home() {
+export default function Page() {
   const ani = useRef();
   
   useLayoutEffect(() => {
@@ -19,18 +16,16 @@ export default function Home() {
     return () => ctx.revert();
   }, []);
   return (
-    
     <>
       <Navebar />
       <div className="w-screen lg:w-4/5 mx-auto h-screen p-5 " ref={ani}>
-        <div className="card h-96 rounded-lg bg-[#FFDBB8] lg:flex" style={{opacity:0}}>
+        <div className="card h-96 rounded-lg bg-[#FFEAD7] lg:flex" style={{opacity:0}}>
           <div className="w-3/6  flex justify-center items-center">
            
-            <h1 className="fade" style={{opacity:0}}>Happy Fun Game</h1>
+            <h1 className="fade" style={{opacity:0}}>About</h1>
           </div>
           <div className="w-3/6  flex justify-center items-center">
-            <Image width={160} height={20} src="/intro.png" className="pic mt-5" style={{opacity:0}}/>
-            <Image width={160} height={20} src="/first.png" className="pic mt-5" style={{opacity:0}}/>
+           
           </div>
         </div>
       </div>
